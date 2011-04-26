@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  password: MyString
+  name: MyString
+  maildir: MyString
+  local_part: MyString
+  domain_id: 1
+  active: false
+
+two:
+  username: MyString
+  password: MyString
+  name: MyString
+  maildir: MyString
+  local_part: MyString
+  domain_id: 1
+  active: false

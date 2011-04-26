@@ -1,0 +1,29 @@
+<h1>Listing aliases</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Goto</th>
+    <th>Domain</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aliases.each do |alias| %>
+  <tr>
+    <td><%= alias.address %></td>
+    <td><%= alias.goto %></td>
+    <td><%= alias.domain_id %></td>
+    <td><%= alias.active %></td>
+    <td><%= link_to 'Show', alias %></td>
+    <td><%= link_to 'Edit', edit_alias_path(alias) %></td>
+    <td><%= link_to 'Destroy', alias, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alias', new_alias_path %>

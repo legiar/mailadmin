@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mailbox_id: 1
+  domain_id: 1
+  address: MyString
+  action: MyString
+
+two:
+  mailbox_id: 1
+  domain_id: 1
+  address: MyString
+  action: MyString

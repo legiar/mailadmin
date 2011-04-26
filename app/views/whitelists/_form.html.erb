@@ -1,0 +1,33 @@
+<%= form_for(@whitelist) do |f| %>
+  <% if @whitelist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@whitelist.errors.count, "error") %> prohibited this whitelist from being saved:</h2>
+
+      <ul>
+      <% @whitelist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mailbox_id %><br />
+    <%= f.text_field :mailbox_id %>
+  </div>
+  <div class="field">
+    <%= f.label :domain_id %><br />
+    <%= f.text_field :domain_id %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :action %><br />
+    <%= f.text_field :action %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

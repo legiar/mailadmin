@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @mailbox.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @mailbox.password %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @mailbox.name %>
+</p>
+
+<p>
+  <b>Maildir:</b>
+  <%= @mailbox.maildir %>
+</p>
+
+<p>
+  <b>Local part:</b>
+  <%= @mailbox.local_part %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%= @mailbox.domain_id %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @mailbox.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_mailbox_path(@mailbox) %> |
+<%= link_to 'Back', mailboxes_path %>

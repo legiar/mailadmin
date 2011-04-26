@@ -1,0 +1,29 @@
+<h1>Listing whitelists</h1>
+
+<table>
+  <tr>
+    <th>Mailbox</th>
+    <th>Domain</th>
+    <th>Address</th>
+    <th>Action</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @whitelists.each do |whitelist| %>
+  <tr>
+    <td><%= whitelist.mailbox_id %></td>
+    <td><%= whitelist.domain_id %></td>
+    <td><%= whitelist.address %></td>
+    <td><%= whitelist.action %></td>
+    <td><%= link_to 'Show', whitelist %></td>
+    <td><%= link_to 'Edit', edit_whitelist_path(whitelist) %></td>
+    <td><%= link_to 'Destroy', whitelist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Whitelist', new_whitelist_path %>

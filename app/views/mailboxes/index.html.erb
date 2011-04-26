@@ -1,0 +1,35 @@
+<h1>Listing mailboxes</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Name</th>
+    <th>Maildir</th>
+    <th>Local part</th>
+    <th>Domain</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mailboxes.each do |mailbox| %>
+  <tr>
+    <td><%= mailbox.username %></td>
+    <td><%= mailbox.password %></td>
+    <td><%= mailbox.name %></td>
+    <td><%= mailbox.maildir %></td>
+    <td><%= mailbox.local_part %></td>
+    <td><%= mailbox.domain_id %></td>
+    <td><%= mailbox.active %></td>
+    <td><%= link_to 'Show', mailbox %></td>
+    <td><%= link_to 'Edit', edit_mailbox_path(mailbox) %></td>
+    <td><%= link_to 'Destroy', mailbox, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mailbox', new_mailbox_path %>
